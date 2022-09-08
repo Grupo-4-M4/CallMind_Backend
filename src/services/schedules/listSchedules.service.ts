@@ -14,7 +14,7 @@ const listSchedulesService = async (id: string) => {
         where: { user: { id } },
       })) ||
       (await patientsRepo.findOne({
-        relations: { user: true },
+        relations: { user: true, schedules: true },
         where: { user: { id } },
       }));
 

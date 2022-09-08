@@ -46,7 +46,7 @@ export class Patient {
   @JoinColumn()
   user: User;
 
-  @OneToMany(() => Schedule, (schedule) => schedule.patient, { eager: true })
+  @OneToMany(() => Schedule, (schedule) => schedule.patient)
   schedules: Schedule[];
 
   @OneToMany(() => Chart, (chart) => chart.patient, { eager: true })

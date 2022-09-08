@@ -11,6 +11,8 @@ const listOnePatientsService = async (id: string, patientId: any) => {
     .where("psychologist.id = :id", { id })
     .andWhere("patient.id = :id", { patientId })
     .getOne();
+
+    
   return patient;
 };
 

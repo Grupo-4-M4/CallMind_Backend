@@ -19,9 +19,9 @@ export class Schedule {
   @Column({ nullable: true })
   link: string;
 
-  @ManyToOne(() => Patient)
+  @ManyToOne(() => Patient, (patient) => patient.schedules, { eager: true })
   patient: Patient;
 
-  @ManyToOne(() => Psychologist)
+  @ManyToOne(() => Psychologist, (psychologist) => psychologist.schedules)
   psychologist: Psychologist;
 }
