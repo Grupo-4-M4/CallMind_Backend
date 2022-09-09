@@ -10,7 +10,7 @@
     "build": "tsc",
     "typeorm": "typeorm-ts-node-commonjs",
     "test": "cross-env NODE_env=test SECRET_KEY=secret_key jest",
-    "start": "node dist/app.js"
+    "start": "node dist/src/server.js"
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.0",
@@ -39,7 +39,7 @@
     "pg": "^8.7.3",
     "reflect-metadata": "^0.1.13",
     "ts-node": "^10.9.1",
-    "typeorm": "^0.3.6",
+    "typeorm": "^0.3.9",
     "uuid": "^8.3.2",
     "yup": "^0.32.11"
   }
