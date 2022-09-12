@@ -6,10 +6,7 @@ import listOnePatientService from "../../services/psychologists/listOnePatient.s
 const listOnePatientController = async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
-    const find = id;
-
-    const patient = await listOnePatientService(find);
-    console.log("Encontrado no controller", patient);
+    const patient = await listOnePatientService(id);
 
     return res.json(instanceToPlain(patient));
   } catch (err) {
